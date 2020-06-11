@@ -22,6 +22,5 @@ public class BrowserPrototype {
         } catch (IOException x) {
             System.err.println(x);
         }
-
     }
 }
