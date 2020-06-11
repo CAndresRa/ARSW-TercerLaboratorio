@@ -2,7 +2,7 @@
 
 ### Autor: Carlos Andrés Ramírez Torres
 ### Fecha: Miercoles, 10 de Junio del 2020
-##### LOC/h: 2390/24 = 183.84 LOC/h
+##### LOC/h: 5488/24 = 228.6 LOC/h
 
 ## Uso 
 
@@ -27,6 +27,14 @@ Existen 5 casos de uso para la ejecución del proyecto, los cuales son:
  ![Texto alternativo](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/urlControl.png)
  
  * **Generador de archivos .html a partir de una URL:** mediante la Url de un sitio web, se escribe un archivo html que es guardado en directorio de resources del proyecto.
+ 
+ Para ejecutar este programa se debe realizar el siguiente comando en la terminal:
+ 
+ `java -cp target/classes edu.escuelaing.arsw.app.App.browserPrototype.BrowserPrototype <URL>`
+ 
+ Por ejemplo:
+ 
+ ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/Uso%20prototype.png)
  
  * **Comunicacion Cliente - Servidor elevar al cuadrado:** Mediante el uso de sockets se establece una conexion cliente servidor, donde el cliente ingresa un numero, el cual es respondido por el servidor con la potencia del mismo, 
  Para ejecutar este programa se debe realizar el siguiente procedimiento:
@@ -80,20 +88,43 @@ El diagrama muestra que un servidor web **HttpServer** es el encargado de habili
 ## Pruebas de aceptación
 
 * **Manejo de URL:**
+
 ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/urlControl.png)
+
 * **Generador de archivos .html a partir de una URL:** 
-![]()
+
+Directorio del proyecto antes de ejecutar el comando de uso en la terminal.
+
+![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/Resources%20Sin%20file%20Browser.png)
+
+Ejecución en terminal, actualizacion de estado en directorio del proyecto.
+
+![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/PrototipoActualizado.png)
+
+Verificación del estado del nuevo documento con extension **.XHTM**
+
+![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/TestProtoype.png)
+
 * **Comunicacion Cliente - Servidor elevar al cuadrado:**
+
 ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/Uso%20y%20prueba%20de%20elevar%20al%20cuadrado.png)
+
 * **Comunicacion Cliente - Servidor Funciones Trigonometricas:**
+
 ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/Uso%20y%20pruebas%20fun%20tri.png)
+
 * **Servidor Web: Mostrar archivos existentes en el servidor:**
+
     * Prueba archivo **PNG**
    
     ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/java%20prueba.png)
+    
     * Prueba archivo **.HTML**
+    
     ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/pruebaHTML.png)
+    
     * Prueba de **Archivo no encontrado**
+    
     ![](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/PruebaNotFound.png)
 
  
