@@ -2,6 +2,11 @@ package edu.escuelaing.arsw.app.App.trigonometricFunctions;
 import java.io.*;
 import java.net.*;
 public class EchoClientTrigonometric {
+    /**
+     * Server for the client
+     * @param args n/a
+     * @throws IOException because of the libraries used in the implementation of sockets
+     */
     public static void main(String[] args) throws IOException {
         Socket echoSocket = null;
         PrintWriter out = null;

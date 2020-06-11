@@ -9,6 +9,12 @@ import java.net.Socket;
 
 public class EchoServerTrigonometric {
     static String operation = "cos";
+
+    /**
+     * Server that calculates cosine, sine or tangent of values entered by the user and determined operation
+     * @param args n/a
+     * @throws IOException  because of the libraries used in the implementation of sockets and files
+     */
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {
@@ -57,6 +63,10 @@ public class EchoServerTrigonometric {
         serverSocket.close();
     }
 
+    /**
+     * Check if the user changed the operation
+     * @param inputLine Line entered by customer
+     */
     public static void checkOperation(String inputLine){
         if(inputLine.contains("fun:sin")) {
             operation = "sin";
@@ -72,6 +82,11 @@ public class EchoServerTrigonometric {
         }
     }
 
+    /**
+     * Calculates the value corresponding to the trigonometric function selected by the client
+     * @param value number entered by customer
+     * @return Value of trigonometric function selected
+     */
     public static Double calculate(Double value){
         if(operation.equals("sin")){
             return Math.sin(value);

@@ -4,8 +4,12 @@ import java.net.*;
 import java.io.*;
 
 public class EchoServerPow {
-
-public static void main(String[] args) throws IOException {
+    /**
+     * Servidor que responde al cliente la potencia al cuadrado del numero ingresado
+     * @param args n/a
+     * @throws IOException because of the libraries used in the implementation of sockets and files
+     */
+    public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(35000);
