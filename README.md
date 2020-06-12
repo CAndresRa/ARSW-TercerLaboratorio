@@ -81,9 +81,9 @@ Por ejemplo:
 
 ## Diagrama
 
-![Texto alternativo](https://github.com/CAndresRa/ARSW-TercerLaboratorio/blob/master/ImgReadme/diagrama.png)
+![Texto alternativo](ImgReadme/image.png)
 
-El diagrama muestra que un servidor web **HttpServer** es el encargado de habilitar el **localhost:35002** del mismo, mediante el browser se recibiran solicitudes de tipo **GET** y sera el encargado de responderlas con ayuda de la implementación en el back de la aplicación, el servidor web **HttpServer** crea una instancia de la clase concreta **BrowserService** la cual tendrá como finalidad instanciar el objeto solicitado por el cliente, mediante el uso de la interfaz **FileBrowser** que esta implmentado por las clases **HtmlFile** y **PngFile** que determinaran el retorno corresponiente de la solicitud del cliente.
+El diagrama muestra que un servidor web **HttpServer** es el encargado de habilitar el **localhost:35002** del mismo, mediante el browser se recibiran solicitudes de tipo **GET** y sera el encargado de responderlas con ayuda de la implementación en el back de la aplicación, el servidor web **HttpServer** crea una instancia de la clase concreta **BrowserService** la cual tendrá como finalidad instanciar el objeto solicitado por el cliente, mediante el uso de la interfaz **FileBrowser** que esta implmentado por las clases **HtmlFile**, **PngFile** y **JsFile** que determinaran el retorno corresponiente de la solicitud del cliente.
 
 ## Pruebas de aceptación
 

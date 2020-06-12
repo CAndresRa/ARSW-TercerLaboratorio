@@ -1,6 +1,7 @@
 package edu.escuelaing.arsw.app.App.httpServer.model;
 
 import java.io.IOException;
+import java.net.Socket;
 
 public interface FileBrowser {
 
@@ -9,5 +10,5 @@ public interface FileBrowser {
      * @return data understandable by the server for display in browser
      * @throws IOException because of the libraries used in the implementation of files
      */
-    public String getFile(String path) throws IOException;
+    public void getFile(String path, Socket clientSocket) throws IOException;
 }

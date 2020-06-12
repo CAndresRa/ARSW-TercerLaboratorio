@@ -1,6 +1,7 @@
 package edu.escuelaing.arsw.app.App.httpServer.model;
 
 import java.io.IOException;
+import java.net.Socket;
 
 public class BrowserService {
     FileBrowser fileBrowser;
@@ -17,15 +18,17 @@ public class BrowserService {
         else if (filePath.contains(".png")){
             fileBrowser = new PngFile();
         }
+        else if(filePath.contains(".js")){
+            fileBrowser = new JsFile();
+        }
     }
 
     /**
      * @return data understandable by the server for display in browser
      * @throws IOException because of the libraries used in the implementation of files
      */
-    public String getFileBrowser() throws IOException {
-        String file = fileBrowser.getFile(filePath);
-        return file;
+    public void getFileBrowser(Socket clientSocket) throws IOException {
+        fileBrowser.getFile(filePath, clientSocket);
     }
 
 }

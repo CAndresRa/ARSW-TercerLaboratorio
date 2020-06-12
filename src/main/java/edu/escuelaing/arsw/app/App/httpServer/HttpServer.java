@@ -29,7 +29,7 @@ public class HttpServer {
             }
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            String inputLine, outputLine;
+            String inputLine;
             try {
                 Integer count = 0;
                 String[] header = null;
@@ -45,13 +45,12 @@ public class HttpServer {
                 String path = "src/main/resources/";
                 path = path + header[1].substring(1);
                 BrowserService browserService = new BrowserService(path);
-                String fileFound = browserService.getFileBrowser();
-                outputLine = fileFound;
-                out.println(outputLine);
+                browserService.getFileBrowser(clientSocket);
                 out.close();
                 in.close();
 
             } catch (Exception e) {
+                e.printStackTrace();
                 out.println(
                         "HTTP/1.1 200 \r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html\r\n\r\n" +
                                 "<html><head><title>Error 404</title></head><body><h1>ERROR 404: Archivo no encontrado en el sistema</h1></body></html>"
